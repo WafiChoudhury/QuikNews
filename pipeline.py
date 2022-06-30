@@ -11,7 +11,7 @@ query = [{
     'url': 'https://www.washingtonpost.com/politics/2022/06/13/biden-frustration-soaring-gas-prices/',
     'pageType': 'article'
 }]
-results = request_raw(query, api_key='ce0a5dc4c9a0488e9516db7409292a31')
+results = request_raw(query, api_key='4fb1ee6895d543c494561dd7ab5fa45e')
 
 
 ###
