@@ -3,7 +3,7 @@ import requests
 from autoextract.sync import request_raw
 from newsapi import NewsApiClient
 
-api = NewsApiClient(api_key='bf4fd47c848f4fc78aac47edabae7211')
+api = NewsApiClient(api_key='4fb1ee6895d543c494561dd7ab5fa45e')
 
 
 
