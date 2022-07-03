@@ -23,11 +23,11 @@ struct NewsDetailView: View {
                     
                     AsyncImage(url: URL(string: obj.image)) { image in
                         image.resizable()
-                        image.ignoresSafeArea()
+                        //image.ignoresSafeArea()
                     } placeholder: {
                         Color.gray
                     }
-                    .frame(width: geometry.size.width, height: geometry.size.height)
+                   // .frame(width: geometry.size.width, height: geometry.size.height)
                     .clipShape(RoundedRectangle(cornerRadius: 25))
                 })
                 .ignoresSafeArea(edges: .top)
@@ -49,33 +49,55 @@ struct NewsDetailView: View {
                     }
                     .frame( height: 20, alignment: .topTrailing)
                     .padding(.bottom, 200)
-
+                    
                 }
                 
                 
                 
             }
             
-
+            Spacer()
+            ScrollView(.vertical){
                 
-                ScrollView{
-                    VStack(alignment: .leading){
-                        
+                
+                
+                VStack(alignment: .leading){
+                    
+                    Section
+                    {
                         Text(obj.title)
                             .bold()
-                            .font(.title2)
-                            .padding(.bottom, 20)
+                            .font(.system(size: 20))
+                            .font(Font.custom("Roboto-Bold", size: 20))
+                            .padding(.bottom, 5)
+                        
+                        HStack{
+                            
+                            Text("Source: " + obj.source)
+                                .bold()
+                                .font(.system(size: 15, weight: .bold, design: .rounded))
+                                .padding(.bottom, 10)
+                            
+                            Spacer()
+                            CategoryTagView(obj: obj)
+                            Spacer()
+                            
+                        }
                         
                         
-                        Text(obj.body)
-                            .bold()
-                            .lineSpacing(15)
-                        
-                        
-                    }.padding()
-
-                }
+                    }
+                    
+                    
+                    Text(obj.body)
+                        .bold()
+                        .font(Font.custom("Roboto-Regular.ttf", size: 15))
+                        .lineSpacing(15)
+                    
+                    
+                }.padding()
                 
+            }
+            
             
             
         }

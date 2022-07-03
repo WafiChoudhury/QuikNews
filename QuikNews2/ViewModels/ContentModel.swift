@@ -10,26 +10,26 @@ import FirebaseCore
 import Firebase
 import FirebaseFirestore
 class ContentModel: NSObject, ObservableObject, Identifiable {
-
+    
     @Published var news = [NewsObject]()
-
+    
     @Published var trending = [TrendingModel]()
-
-
+    
+    
     override init(){
         
         
         super.init()
-
+        
         if FirebaseApp.app() == nil {
             FirebaseApp.configure()
             
         }
-       
+        
         fetchNews()
-
+        
     }
-
+    
     
     func fetchNews(){
         
@@ -41,11 +41,10 @@ class ContentModel: NSObject, ObservableObject, Identifiable {
             }
             else if let querySnapshot = querySnapshot{
                 for document in querySnapshot.documents{
-
+                    
                     let body = document.data()["Content"] as? String ?? ""
                     let author = document.data()["Author"] as? String ?? ""
                     let source = document.data()["Source"] as? String ?? ""
-
                     
                     
                 }
@@ -54,8 +53,8 @@ class ContentModel: NSObject, ObservableObject, Identifiable {
     }
     
     func updateTrending(){
-                
-        news.append(NewsObject(id: "hey", title: "hey", body: "hey", image: "quikpic"))
-    
+        
+        news.append(NewsObject(id: "hey", title: "hey", body: "hey", image: "quikpic", source:"hey"))
+        
     }
 }

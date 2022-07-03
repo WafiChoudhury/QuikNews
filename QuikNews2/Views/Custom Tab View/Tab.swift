@@ -10,23 +10,34 @@ import SwiftUI
 struct Tab: View {
     
     @Binding var loggedIn: Bool
+    @State private var selection: String = "home"
+    @State private var tabSelection: TabBarItem = .home
     @ObservedObject private var viewModel = NewsViewModel()
     
     var body: some View {
         
+        CustomTabContainerView(selection: $tabSelection) {
+            
+            MainPageView()
+                .environmentObject(viewModel)
+                .tabBarItem(tab: .home, selection: $tabSelection)
+            
+            Settings(loggedIn: $loggedIn)
+                .environmentObject(viewModel)
+                .tabBarItem(tab: .profile, selection: $tabSelection)
+        }
+
+    }
+    
+ 
+    
+}
+extension Tab{
+    
+    private var defaultTabView : some View {
         
-        
-        TabView{
-            
-            
-            
-            
-            TrendingTab()
-                .environmentObject(NewsViewModel())
-                .tabItem {
-                    Label("Trending", systemImage: "chart.line.uptrend.xyaxis").foregroundColor(.white)
-                }
-            
+        TabView(selection: $selection){
+              
             MainPageView()
                 .environmentObject(NewsViewModel())
                 .tabItem {
@@ -37,18 +48,12 @@ struct Tab: View {
                 .environmentObject(NewsViewModel())
                 .tabItem {
                     Label("Settings", systemImage: "gearshape").foregroundColor(.white)
+                    
                 }
             
             
             
-            
         }
-        
-        //home page similar to FYP
-  
-        
-        
-        
     }
+    
 }
-

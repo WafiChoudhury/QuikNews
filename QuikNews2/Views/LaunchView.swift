@@ -38,11 +38,10 @@ struct LaunchView: View {
                 VStack(spacing:20){
                     
                     Spacer()
-                    Text("QuikNews").foregroundColor(.white).bold().font(.title)
-
+                    Text("QuikNews").foregroundColor(.white).font(.largeTitle).bold()
+                    
                     
                     Button {
-                        
                         createFormShowing = true
                     } label: {
                         

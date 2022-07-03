@@ -14,13 +14,14 @@ struct NewsObject: Identifiable{
     var title: String
     var body: String
     var image: String
-    
+    var source: String
     enum CodingKeys: String, CodingKey {
 
           case title
           case body
           case image
           case id
+          case source
       }
     
 }

@@ -15,7 +15,7 @@ struct MainPageView: View {
     @State var index: Int = 0
     
     init(){
-        viewModel.articles.append(NewsObject(id: "hey", title: "hey", body: "hey", image: "quikpic"))
+        viewModel.articles.append(NewsObject(id: "hey", title: "hey", body: "hey", image: "quikpic", source: "hey"))
     }
     
     var body: some View {

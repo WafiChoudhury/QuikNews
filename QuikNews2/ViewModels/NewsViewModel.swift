@@ -48,8 +48,8 @@ class NewsViewModel: ObservableObject  {
  
                 let id = UUID().uuidString
                 
-                return NewsObject(id: id, title: author, body: body, image: image
-                )
+                return NewsObject(id: id, title: author, body: body, image: image, source:source)
+                
             }
             
         }
