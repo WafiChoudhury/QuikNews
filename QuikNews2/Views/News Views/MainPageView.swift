@@ -11,32 +11,32 @@ import SwiftUI
 struct MainPageView: View {
     
     @ObservedObject var viewModel = NewsViewModel()
-    var newsArticles = [NewsObject]()
     @State var index: Int = 0
-    
-    init(){
-        viewModel.articles.append(NewsObject(id: "hey", title: "hey", body: "hey", image: "quikpic", source: "hey"))
-    }
     
     var body: some View {
         
+        
         ZStack{
+            
+            
             
             ModelPages(viewModel.articles ,currentPage: $index, navigationOrientation: .vertical,
                        hasControl: false) { pageIndex, objs in
                 
-                NewsDetailView(obj: viewModel.articles[pageIndex]).ignoresSafeArea()
+                
+                NewsDetailView(obj: viewModel.articles[pageIndex])
                 
             }
             
-         
             
             
-        }.onAppear(){
-            self.viewModel.fetchNews()
         }
         .ignoresSafeArea()
+        .onAppear(){
+            
+            self.viewModel.fetchNews()
+            
+        }
     }
-    
 }
 

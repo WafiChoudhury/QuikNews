@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import FirebaseAuthUI
+import FirebaseAuth
 
 struct Tab: View {
     
@@ -18,13 +20,20 @@ struct Tab: View {
         
         CustomTabContainerView(selection: $tabSelection) {
             
+          
             MainPageView()
                 .environmentObject(viewModel)
                 .tabBarItem(tab: .home, selection: $tabSelection)
             
+            CategoryTabsView()
+                .environmentObject(viewModel)
+                .tabBarItem(tab: .favorites, selection: $tabSelection)
+            
             Settings(loggedIn: $loggedIn)
                 .environmentObject(viewModel)
                 .tabBarItem(tab: .profile, selection: $tabSelection)
+            
+        
         }
 
     }
@@ -50,7 +59,6 @@ extension Tab{
                     Label("Settings", systemImage: "gearshape").foregroundColor(.white)
                     
                 }
-            
             
             
         }

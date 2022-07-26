@@ -22,12 +22,26 @@ struct NewsDetailView: View {
                 GeometryReader(content: { geometry in
                     
                     AsyncImage(url: URL(string: obj.image)) { image in
-                        image.resizable()
-                        //image.ignoresSafeArea()
+                        
+                        ZStack{
+                            
+                            Rectangle()
+                                .fill(Color(.gray))
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width:geometry.size.width,height:450)
+                            
+                            image
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .layoutPriority(-1) // special sauce
+                            
+                            
+                        }
+                        .clipped()
                     } placeholder: {
                         Color.gray
                     }
-                   // .frame(width: geometry.size.width, height: geometry.size.height)
+                    // .frame(width: geometry.size.width, height: geometry.size.height)
                     .clipShape(RoundedRectangle(cornerRadius: 25))
                 })
                 .ignoresSafeArea(edges: .top)
@@ -52,8 +66,6 @@ struct NewsDetailView: View {
                     
                 }
                 
-                
-                
             }
             
             Spacer()
@@ -67,20 +79,22 @@ struct NewsDetailView: View {
                     {
                         Text(obj.title)
                             .bold()
-                            .font(.system(size: 20))
-                            .font(Font.custom("Roboto-Bold", size: 20))
-                            .padding(.bottom, 5)
+                            .lineLimit(5)
+                            .font(.system(size: 28))
+                            .font(Font.custom("Helvetica Condensed Regular.ttf", size: 24))
+                            .padding(.top, 12)
+                            .padding(.leading, 10)
                         
                         HStack{
                             
-                            Text("Source: " + obj.source)
-                                .bold()
-                                .font(.system(size: 15, weight: .bold, design: .rounded))
-                                .padding(.bottom, 10)
+                            Text(obj.source)
+                                .font(Font.custom("Helvetica Condensed Regular.ttf", size: 18))
+                                .italic()
+                                .padding(.top, 1)
+                                .foregroundColor(.black).opacity(20)
+                                .padding(.bottom, 1)
+                                .padding(.leading, 10)
                             
-                            Spacer()
-                            CategoryTagView(obj: obj)
-                            Spacer()
                             
                         }
                         
@@ -90,16 +104,22 @@ struct NewsDetailView: View {
                     
                     Text(obj.body)
                         .bold()
-                        .font(Font.custom("Roboto-Regular.ttf", size: 15))
-                        .lineSpacing(15)
+                        .font(Font.custom("Helvetica Condensed Regular.ttf", size: 18))
+                        .padding(.bottom, 100)
+                        .padding(.top, 10)
+                        .padding([.leading, .trailing], 10)
+                        .multilineTextAlignment(.leading)
+                        .fixedSize(horizontal: false, vertical: true)
                     
-                    
-                }.padding()
+                }
+                .padding()
+                .lineSpacing(5)
+                
                 
             }
             
             
-            
+            Spacer()
         }
         
         

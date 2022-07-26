@@ -14,21 +14,17 @@ struct CategoryTagView: View {
     var body: some View {
         
         ZStack{
-            
-                
-                
+
             
                 Capsule()
                     .fill(.indigo)
                     .frame(width:80, height: 32)
                     .padding(.bottom, 10)
                 
-            
-            
-            Text("#Politics")
+            Text("#" + obj.category)
                 .font(.system(size:15))
                 .bold()
-                .foregroundColor(.white)
+                .foregroundColor(.gray)
                 .padding(.bottom, 12)
             
         }

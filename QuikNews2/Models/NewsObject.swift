@@ -8,13 +8,14 @@
 import Foundation
 import SwiftUI
 
-struct NewsObject: Identifiable{
+struct NewsObject: Identifiable, Hashable{
     
     var id: String
     var title: String
     var body: String
     var image: String
     var source: String
+    var category: String
     enum CodingKeys: String, CodingKey {
 
           case title
@@ -22,6 +23,8 @@ struct NewsObject: Identifiable{
           case image
           case id
           case source
+          case category
+
       }
     
 }

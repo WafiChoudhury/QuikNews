@@ -54,7 +54,7 @@ class ContentModel: NSObject, ObservableObject, Identifiable {
     
     func updateTrending(){
         
-        news.append(NewsObject(id: "hey", title: "hey", body: "hey", image: "quikpic", source:"hey"))
+        news.append(NewsObject(id: "hey", title: "hey", body: "hey", image: "quikpic", source:"hey", category: "hey"))
         
     }
 }

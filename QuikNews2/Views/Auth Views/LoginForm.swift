@@ -27,6 +27,7 @@ struct LoginForm: View {
                     Section{
                         TextField("Email", text: $email)
                         SecureField("Password", text: $password)
+                        
                     }
                     
                     if(errorMessage != nil){

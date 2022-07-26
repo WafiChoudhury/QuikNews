@@ -16,7 +16,7 @@ enum TabBarItem: Hashable{
         switch self{
             
         case .home: return "house"
-        case .favorites: return "heart"
+        case .favorites: return "magnifyingglass"
         case .profile: return "person"
         }
     }

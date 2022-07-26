@@ -18,10 +18,10 @@ struct CreateAccount: View {
     
     var body: some View {
         
-        VStack(alignment: .center, spacing: 30){
+        VStack(alignment: .center, spacing: 20){
             
-            Text("Welcome to QuikNews 👋").font(.title).bold()
-            Text("You can start using the application after sign up.")
+            Text("Sign Up 👋").font(.title).bold()
+            Text("Start using the application after sign up.")
                 .font(.subheadline)
                 .lineLimit(4)
                 .foregroundColor(.gray)
@@ -31,9 +31,17 @@ struct CreateAccount: View {
                 .background(lightGreyColor)
                 .cornerRadius(5.0)
                 .frame(width: 300)
+                .autocapitalization(.none)
                 .padding(.bottom, 20)
             
             SecureField("Password", text: $password)
+                .padding()
+                .background(lightGreyColor)
+                .cornerRadius(5.0)
+                .frame(width: 300)
+                .padding(.bottom, 20)
+            
+            SecureField("Name", text: $name)
                 .padding()
                 .background(lightGreyColor)
                 .cornerRadius(5.0)
@@ -58,8 +66,10 @@ struct CreateAccount: View {
                     .background(Color.indigo)
                     .cornerRadius(15.0)
             }
-            
-        }.padding()
+            Spacer()
+        }
+        .padding(.top, 120)
+        .padding()
         
         
     }

@@ -9,11 +9,17 @@ import Foundation
 import FirebaseFirestore
 import Firebase
 class NewsViewModel: ObservableObject  {
-
-   
+    
+    
     
     @Published var articles = [NewsObject]()
-
+    
+    init(){
+        articles.append(NewsObject(id: "hey", title: "hey", body: "hey", image: "quikpic", source: "hey", category: "Art"))
+        articles.append(NewsObject(id: "hey", title: "hey", body: "hey", image: "quikpic", source: "hey", category: "Economy"))
+        
+    }
+    
     
     
     func fetchNews(){
@@ -22,7 +28,6 @@ class NewsViewModel: ObservableObject  {
             FirebaseApp.configure()
             
         }
-       
         
         let db = Firestore.firestore()
         db.collection("Articles").addSnapshotListener { (querySnapshot, error) in
@@ -40,19 +45,18 @@ class NewsViewModel: ObservableObject  {
             self.articles = documents.map{ (QueryDocumentSnapshot) -> NewsObject in
                 
                 let data = QueryDocumentSnapshot.data()
-                
                 let body = data["Content"] as? String ?? ""
                 let author = data["Author"] as? String ?? ""
                 let source = data["Source"] as? String ?? ""
                 let image = data["Image"] as? String ?? "quikpic"
- 
+                let category = data["Category"] as? String ?? ""
                 let id = UUID().uuidString
                 
-                return NewsObject(id: id, title: author, body: body, image: image, source:source)
+                return NewsObject(id: id, title: author, body: body, image: image, source:source, category: category)
                 
             }
             
         }
-
-}
+        
+    }
 }
