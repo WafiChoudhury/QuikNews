@@ -32,9 +32,10 @@
 		B12FD79C288E15AC00497130 /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12FD79B288E15AC00497130 /* ResetPasswordView.swift */; };
 		B12FD7A0288E30EF00497130 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12FD79F288E30EF00497130 /* TextView.swift */; };
 		B12FD7A2288F334200497130 /* ChangePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12FD7A1288F334200497130 /* ChangePasswordView.swift */; };
+		B12FD7A42890810E00497130 /* SFSafariViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12FD7A32890810E00497130 /* SFSafariViewWrapper.swift */; };
+		B12FD7A6289085E800497130 /* SFSafariViewWrapper2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12FD7A5289085E700497130 /* SFSafariViewWrapper2.swift */; };
 		B13C25832878AE3900729648 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13C25822878AE3800729648 /* IconView.swift */; };
 		B13C25852878AF4400729648 /* img.png in Resources */ = {isa = PBXBuildFile; fileRef = B13C25842878AF4400729648 /* img.png */; };
-		B13C25872878C6F100729648 /* AppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = B13C25862878C6F000729648 /* AppIcon.appiconset */; };
 		B13F0F982880A34300506068 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13F0F972880A34300506068 /* CategoryView.swift */; };
 		B13F0F9A288378E300506068 /* CategoryTabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13F0F99288378E300506068 /* CategoryTabsView.swift */; };
 		B14F7D4D288770EF0072718F /* SelectPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14F7D4C288770EE0072718F /* SelectPageView.swift */; };
@@ -77,9 +78,10 @@
 		B12FD79B288E15AC00497130 /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
 		B12FD79F288E30EF00497130 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		B12FD7A1288F334200497130 /* ChangePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordView.swift; sourceTree = "<group>"; };
+		B12FD7A32890810E00497130 /* SFSafariViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSafariViewWrapper.swift; sourceTree = "<group>"; };
+		B12FD7A5289085E700497130 /* SFSafariViewWrapper2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSafariViewWrapper2.swift; sourceTree = "<group>"; };
 		B13C25822878AE3800729648 /* IconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
 		B13C25842878AF4400729648 /* img.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img.png; sourceTree = "<group>"; };
-		B13C25862878C6F000729648 /* AppIcon.appiconset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppIcon.appiconset; sourceTree = "<group>"; };
 		B13F0F972880A34300506068 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		B13F0F99288378E300506068 /* CategoryTabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTabsView.swift; sourceTree = "<group>"; };
 		B14F7D4C288770EE0072718F /* SelectPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPageView.swift; sourceTree = "<group>"; };
@@ -139,7 +141,6 @@
 				B12DED332849A1E2006DC496 /* ViewModels */,
 				B12DED322849A1E1006DC496 /* Models */,
 				B12DED282849A1D9006DC496 /* Assets.xcassets */,
-				B13C25862878C6F000729648 /* AppIcon.appiconset */,
 				B13C25842878AF4400729648 /* img.png */,
 				B12DED2A2849A1D9006DC496 /* Preview Content */,
 				B12FD79F288E30EF00497130 /* TextView.swift */,
@@ -192,6 +193,8 @@
 				B16A5D0D2873827B00BBD05B /* ProfileRectangle.swift */,
 				B13C25822878AE3800729648 /* IconView.swift */,
 				B12FD7A1288F334200497130 /* ChangePasswordView.swift */,
+				B12FD7A32890810E00497130 /* SFSafariViewWrapper.swift */,
+				B12FD7A5289085E700497130 /* SFSafariViewWrapper2.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -324,7 +327,6 @@
 				B12DED2C2849A1D9006DC496 /* Preview Assets.xcassets in Resources */,
 				B12DED292849A1D9006DC496 /* Assets.xcassets in Resources */,
 				B13C25852878AF4400729648 /* img.png in Resources */,
-				B13C25872878C6F100729648 /* AppIcon.appiconset in Resources */,
 				B10FEAEA285D929A009163AF /* Helvetica Condensed Regular copy in Resources */,
 				B12DED4F2849B14F006DC496 /* GoogleService-Info.plist in Resources */,
 			);
@@ -414,6 +416,7 @@
 				B12DED382849ADAB006DC496 /* NewsDetailView.swift in Sources */,
 				B13C25832878AE3900729648 /* IconView.swift in Sources */,
 				B13F0F982880A34300506068 /* CategoryView.swift in Sources */,
+				B12FD7A6289085E800497130 /* SFSafariViewWrapper2.swift in Sources */,
 				B1AAA5C2286B9FCB00FA9A35 /* CustomTabContainer.swift in Sources */,
 				B1E4461E2849D01A005D8AC0 /* Settings.swift in Sources */,
 				B11D6AC3284D92380069D911 /* LoginForm.swift in Sources */,
@@ -427,6 +430,7 @@
 				B12DED422849AE0D006DC496 /* MainPageView.swift in Sources */,
 				B12FD79C288E15AC00497130 /* ResetPasswordView.swift in Sources */,
 				B11D6AC5284D96920069D911 /* CreateAccount.swift in Sources */,
+				B12FD7A42890810E00497130 /* SFSafariViewWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,13 +558,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"QuikNews2/Preview Content\"";
 				DEVELOPMENT_TEAM = ACRAVGQSGU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QuikNews2/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = QuikNews;
+				INFOPLIST_KEY_CFBundleDisplayName = TLDR;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -586,13 +590,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"QuikNews2/Preview Content\"";
 				DEVELOPMENT_TEAM = ACRAVGQSGU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QuikNews2/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = QuikNews;
+				INFOPLIST_KEY_CFBundleDisplayName = TLDR;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

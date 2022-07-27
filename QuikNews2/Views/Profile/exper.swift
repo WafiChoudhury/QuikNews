@@ -15,129 +15,89 @@ struct exper: View {
     var body: some View {
         
         NavigationView{
-        
-        ScrollView{
             
-            VStack(spacing:80){
+            ScrollView{
                 
-                Group {
+                VStack(spacing:80){
                     
-                    Spacer()
-                    IconView()
-                        .padding(.trailing, 60)
-                 
-                    Button(action: {
-                    }) {
+                    Group {
                         
-                        HStack(){
+                        Spacer()
+                        IconView()
+                            .padding(.trailing, 60)
+                        
+                        Button(action: {
+                        }) {
                             
-                            NavigationLink(destination:ChangePasswordView()){
-                            Text("Change Password")
-                                .foregroundColor(.black)
-                                .font(.system(size: 16, weight: .bold, design: .rounded))
-                                .padding(.leading, 60)
-                            
-                            Spacer()
-                            
-                            Image(systemName: "chevron.forward")
-                                .padding(.trailing, 70)
-                            
+                            HStack(){
+                                
+                                NavigationLink(destination:ChangePasswordView()){
+                                    Text("Change Password")
+                                        .foregroundColor(.black)
+                                        .font(.system(size: 16, weight: .bold, design: .rounded))
+                                        .padding(.leading, 60)
+                                    
+                                    Spacer()
+                                    
+                                    Image(systemName: "chevron.forward")
+                                        .padding(.trailing, 70)
+                                    
+                                }
                             }
-                        }
-                        
-                    }
-                    .background(RoundedRectangle(cornerRadius: 10.0)
-                        .foregroundColor(Color(UIColor.lightGray).opacity(0.3))
-                        .frame(width: 320, height: 50)
-                        .padding())
-                    
-                    
-                    Button(action: {
-                    }) {
-                        
-                        HStack(){
-                            Text("Terms and Conditions")
-                                .foregroundColor(.black)
-                                .font(.system(size: 16, weight: .bold, design: .rounded))
-                                .padding(.leading, 60)
-                            
-                            Spacer()
-                            
-                            Image(systemName: "chevron.forward")
-                                .padding(.trailing, 70)
-                            
                             
                         }
+                        .background(RoundedRectangle(cornerRadius: 10.0)
+                            .foregroundColor(Color(UIColor.lightGray).opacity(0.3))
+                            .frame(width: 320, height: 50)
+                            .padding()
+                       )
                         
-                    }
-                    .background(RoundedRectangle(cornerRadius: 10.0)
-                        .foregroundColor(Color(UIColor.lightGray).opacity(0.3))
-                        .frame(width: 320, height: 50)
-                        .padding())
-                    
-                    
-                    
-                    Button(action: {
-                    }) {
                         
-                        HStack(){
-                            Text("Privacy")
-                                .foregroundColor(.black)
-                                .font(.system(size: 16, weight: .bold, design: .rounded))
-                                .padding(.leading, 60)
+                        
+                        SFSafariViewWrapper()
+                      
+                        SFSafariViewWrapper2()
+                        
+                        Button(action: {
+                            try! Auth.auth().signOut()
+                            loggedIn = false
+                        }) {
                             
-                            Spacer()
-                            
-                            Image(systemName: "chevron.forward")
-                                .padding(.trailing, 70)
-                            
+                            HStack(){
+                                Text("Sign Out")
+                                    .foregroundColor(.black)
+                                    .font(.system(size: 16, weight: .bold, design: .rounded))
+                                    .padding(.leading, 60)
+                                
+                                Spacer()
+                                
+                                Image(systemName: "arrow.forward.square")
+                                    .padding(.trailing, 70)
+                                
+                                
+                            }
                             
                         }
+                        .background(RoundedRectangle(cornerRadius: 10.0)
+                            .foregroundColor(Color(UIColor.lightGray).opacity(0.3))
+                            .frame(width: 320, height: 50)
+                            .padding())
+                        
+                        
+                        
+                        Spacer()
+                        
+                        
                         
                     }
-                    .background(RoundedRectangle(cornerRadius: 10.0)
-                        .foregroundColor(Color(UIColor.lightGray).opacity(0.3))
-                        .frame(width: 320, height: 50)
-                        .padding())
-                    
-                    Button(action: {
-                        try! Auth.auth().signOut()
-                        loggedIn = false
-                    }) {
-                        
-                        HStack(){
-                            Text("Sign Out")
-                                .foregroundColor(.black)
-                                .font(.system(size: 16, weight: .bold, design: .rounded))
-                                .padding(.leading, 60)
-                            
-                            Spacer()
-                            
-                            Image(systemName: "arrow.forward.square")
-                                .padding(.trailing, 70)
-                            
-                            
-                        }
-                        
-                    }
-                    .background(RoundedRectangle(cornerRadius: 10.0)
-                        .foregroundColor(Color(UIColor.lightGray).opacity(0.3))
-                        .frame(width: 320, height: 50)
-                        .padding())
-                    
-                    
-                    
-                    Spacer()
-                    
-                    
-                    
                 }
             }
+            
         }
-        
     }
+    
 }
+    
+    
 
-
-
-}
+    

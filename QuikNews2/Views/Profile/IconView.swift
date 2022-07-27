@@ -31,7 +31,9 @@ struct IconView: View {
                     Text(Auth.auth().currentUser?.displayName ?? "User")
                         .bold()
                         .lineLimit(3)
-                    Text(Auth.auth().currentUser?.email ?? "User Email")
+                    
+                    let name = calculateProfileName(name: Auth.auth().currentUser?.email ?? "@Username")
+                    Text( name)
                         .lineLimit(10)
                         .font(.subheadline)
                         .foregroundColor(.gray)
@@ -39,6 +41,15 @@ struct IconView: View {
             }
         }
     }
+}
+
+func calculateProfileName(name:String) -> String{
+    
+    var delimiter = "@"
+    var token = name.components(separatedBy: delimiter)
+    var newName = String(token[0])
+    
+    return newName
 }
 
 struct IconView_Previews: PreviewProvider {

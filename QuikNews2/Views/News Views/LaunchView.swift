@@ -33,14 +33,16 @@ struct LaunchView: View {
             ZStack{
                 
                 Color.indigo
-                
 
                 VStack(spacing:20){
                     
                     Spacer()
-                    Text("QuikNews").foregroundColor(.white).font(.largeTitle).bold()
                     
+                    Text("TLDR").foregroundColor(.white).font(.largeTitle)
+                        .bold()
+                        .padding(.bottom, 20)
                     
+
                     Button {
                         createFormShowing = true
                     } label: {
