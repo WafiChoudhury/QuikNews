@@ -17,10 +17,17 @@ class NewsViewModel: ObservableObject  {
     init(){
         articles.append(NewsObject(id: "hey", title: "hey", body: "hey", image: "quikpic", source: "hey", category: "Art"))
         articles.append(NewsObject(id: "hey", title: "hey", body: "hey", image: "quikpic", source: "hey", category: "Economy"))
-        
+        articles.append(NewsObject(id: "hey", title: "hey", body: "hey", image: "quikpic", source: "hey", category: "Crypto"))
+        articles.append(NewsObject(id: "hey", title: "hey", body: "hey", image: "quikpic", source: "hey", category: "Real Estate"))
+        articles.append(NewsObject(id: "hey", title: "hey", body: "hey", image: "quikpic", source: "hey", category: "Pop Culture"))
+        articles.append(NewsObject(id: "hey", title: "hey", body: "hey", image: "quikpic", source: "hey", category: "Tech"))
+        articles.append(NewsObject(id: "hey", title: "hey", body: "hey", image: "quikpic", source: "hey", category: "Markets"))
+        articles.append(NewsObject(id: "hey", title: "hey", body: "hey", image: "quikpic", source: "hey", category: "Headlines"))
+        articles.append(NewsObject(id: "hey", title: "hey", body: "hey", image: "quikpic", source: "hey", category: "Global"))
+        articles.append(NewsObject(id: "hey", title: "hey", body: "hey", image: "quikpic", source: "hey", category: "Opinion"))
+        articles.append(NewsObject(id: "hey", title: "hey", body: "hey", image: "quikpic", source: "hey", category: "Politics"))
+
     }
-    
-    
     
     func fetchNews(){
         

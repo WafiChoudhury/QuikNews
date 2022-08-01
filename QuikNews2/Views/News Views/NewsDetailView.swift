@@ -105,7 +105,7 @@ struct NewsDetailView: View {
                     Text(obj.body)
                         .bold()
                         .font(Font.custom("Helvetica Condensed Regular.ttf", size: 18))
-                        .padding(.bottom, 100)
+                        .padding(.bottom, 80)
                         .padding(.top, 10)
                         .padding([.leading, .trailing], 10)
                         .multilineTextAlignment(.leading)

@@ -40,7 +40,7 @@ struct CategoryTabsView: View {
                         }
                         NavigationLink(destination: SelectPageView(categoryChosen:"Real Estate")) {
                             
-                            CategoryView(title: "🏠 Real Estate")
+                            CategoryView(title: "🏠 Real \nEstate")
                         }
                         NavigationLink(destination: SelectPageView(categoryChosen:"Tech")) {
                             
